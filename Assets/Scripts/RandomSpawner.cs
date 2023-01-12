@@ -11,17 +11,21 @@ public class RandomSpawner : MonoBehaviour
     void Start()
     {
         spawnAllowed = true;
-        InvokeRepeating("SpawnMobs", 0f, 1f );
+        InvokeRepeating("SpawnMobs", 0f, 3f );
     }
 
     void SpawnMobs()
     {
         if (spawnAllowed)
         {
-            int randEnemy = Random.Range(0, ememyPrefabs.Length);
+            int randEnemyindex = Random.Range(0, ememyPrefabs.Length);
             int randSpawPoint = Random.Range(0, spawnpoints.Length);
+            
 
-            Instantiate(ememyPrefabs[0], spawnpoints[randSpawPoint].position, transform.rotation);
+            Instantiate(ememyPrefabs[randEnemyindex], spawnpoints[randSpawPoint].position, transform.rotation);
+
+
+
         }
     }
     

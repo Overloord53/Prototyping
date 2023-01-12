@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 10f;
     
@@ -17,5 +17,15 @@ public class Movement : MonoBehaviour
         _moveInput.y = Input.GetAxisRaw(Axis);
 
         transform.position += (Vector3) _moveInput * (speed * Time.deltaTime);
+
+        if (transform.position.y > 29)
+        {
+            transform.position += Vector3.down * Time.deltaTime * speed;
+        }
+
+        if (transform.position.y < 2)
+        {
+            transform.position += Vector3.up * Time.deltaTime * speed;
+        }
     }
 }
