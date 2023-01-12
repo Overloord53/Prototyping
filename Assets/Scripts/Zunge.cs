@@ -8,7 +8,8 @@ public class Zunge : MonoBehaviour
     private Rigidbody2D myRigidbody2D;
     private bool spacekeyState;
     public Player player;
-    public float speed = 5f;
+    public float speed = 10f;
+    public Animator animator;
     
 
     
@@ -21,7 +22,7 @@ public class Zunge : MonoBehaviour
     private void Update()
     {
 
-        
+       
 
 
         if (myRigidbody2D.velocity == Vector2.zero)
@@ -41,17 +42,19 @@ public class Zunge : MonoBehaviour
                 ResetTongue();
             } 
         }
+
+       
         
     }
 
     private void LaunchTongue()
     {
-        transform.position += Vector3.right * speed;
+        animator.SetTrigger("Zunge");
     }
 
     private void ResetTongue()
     {
-        transform.position += Vector3.left * speed;
+        
     }
 
     
