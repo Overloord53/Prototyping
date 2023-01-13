@@ -11,6 +11,7 @@ public class Zunge : MonoBehaviour
     public float speed = 10f;
     public Animator animator;
     
+    
 
     
     private void Awake()
@@ -34,14 +35,7 @@ public class Zunge : MonoBehaviour
             } 
         }
         
-        if (myRigidbody2D.velocity == Vector2.zero)
-        {
-            spacekeyState = Input.GetKeyUp(KeyCode.Space);
-            if (spacekeyState == true)
-            {
-                ResetTongue();
-            } 
-        }
+       
 
        
         
@@ -51,11 +45,10 @@ public class Zunge : MonoBehaviour
     {
         animator.SetTrigger("Zunge");
     }
+    
+   
 
-    private void ResetTongue()
-    {
-        
-    }
+    
 
     
 }

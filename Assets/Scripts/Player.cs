@@ -5,10 +5,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 10f;
-    
+    private Rigidbody2D myRigidbody2D;
     private float _startSpeed ;
     private Vector2 _moveInput;
     public string Axis;
+    public Animator animator;
+    private bool spacekeyState;
+    
+    
+    
+    
+    private void Awake()
+    {
+        myRigidbody2D = GetComponent<Rigidbody2D>();
+    }
     
   
 
@@ -27,5 +37,21 @@ public class Player : MonoBehaviour
         {
             transform.position += Vector3.up * Time.deltaTime * speed;
         }
+        
+        if (myRigidbody2D.velocity == Vector2.zero)
+        {
+            spacekeyState = Input.GetKeyDown(KeyCode.Space);
+            if (spacekeyState == true)
+            {
+                LaunchMouth();
+            } 
+        }
+        
+        
     }
+    private void LaunchMouth()
+    {
+        animator.SetTrigger("Auf");
+    }
+   
 }

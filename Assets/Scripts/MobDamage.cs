@@ -20,6 +20,15 @@ public class MobDamage : MonoBehaviour
             }
 
         }
+        if (col.gameObject.CompareTag("Zunge"))
+        {
+            PlayerHealth playerHealth =  col.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
+
+        }
        
     }
 }

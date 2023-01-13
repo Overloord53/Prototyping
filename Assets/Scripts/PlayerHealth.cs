@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,18 +6,23 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
-    public int health;
+    public float currenthealth { get; private set; }
    
     void Start()
     {
-        health = maxHealth;
+        currenthealth = maxHealth;
+    }
+
+    private void Update()
+    {
+        
     }
 
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        currenthealth -= damage;
+        if (currenthealth <= 0)
         {
             Destroy(gameObject);
         }

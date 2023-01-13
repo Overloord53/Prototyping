@@ -6,6 +6,7 @@ public class Enemys : MonoBehaviour
 {
     public float speed = 5f;
     
+    
     void Start()
     {
         
@@ -15,4 +16,6 @@ public class Enemys : MonoBehaviour
     {
         transform.position += Vector3.left * Time.deltaTime * speed;
     }
+    
+  
 }
