@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currenthealth = maxHealth;
+        GetComponent<ScoreScript>();
     }
 
     private void Update()
@@ -24,7 +26,9 @@ public class PlayerHealth : MonoBehaviour
         currenthealth -= damage;
         if (currenthealth <= 0)
         {
+            ScoreScript.scoreValue = 0;
             Destroy(gameObject);
+            SceneManager.LoadScene("LooseScreen");
         }
     }
 }

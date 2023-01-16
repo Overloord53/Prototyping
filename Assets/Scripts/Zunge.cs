@@ -32,19 +32,21 @@ public class Zunge : MonoBehaviour
             if (spacekeyState == true)
             {
                 LaunchTongue();
-            } 
+            }
         }
         
-       
-
-       
+        
         
     }
+
+    
 
     private void LaunchTongue()
     {
         animator.SetTrigger("Zunge");
     }
+
+    
     
    
 

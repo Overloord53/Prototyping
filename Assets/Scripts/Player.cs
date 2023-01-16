@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -11,32 +13,55 @@ public class Player : MonoBehaviour
     public string Axis;
     public Animator animator;
     private bool spacekeyState;
-    
-    
-    
-    
+    public int desiredLane = 1;
+    public float laneDistance = 10.5f;
+    private Vector3 spawnPos;
+
+
+
     private void Awake()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
-    
-  
+
+    private void Start()
+    {
+        spawnPos = transform.position;
+    }
 
     void Update()
     {
-        _moveInput.y = Input.GetAxisRaw(Axis);
 
-        transform.position += (Vector3) _moveInput * (speed * Time.deltaTime);
-
-        if (transform.position.y > 29)
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.position += Vector3.down * Time.deltaTime * speed;
+            desiredLane++;
+            if (desiredLane==3)
+            {
+                desiredLane = 2;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            desiredLane--;
+            if (desiredLane==-1)
+            {
+                desiredLane = 0;
+            }
         }
 
-        if (transform.position.y < 2)
+        Vector3 targetPosition = spawnPos;
+        if (desiredLane == 0)
         {
-            transform.position += Vector3.up * Time.deltaTime * speed;
+            targetPosition += Vector3.up * laneDistance;
         }
+        else if (desiredLane == 2)
+        {
+            targetPosition += Vector3.down * laneDistance;
+        }
+
+        transform.position = targetPosition;
+        
+        
         
         if (myRigidbody2D.velocity == Vector2.zero)
         {
@@ -48,6 +73,17 @@ public class Player : MonoBehaviour
         }
         
         
+        
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Mob"))
+        {
+            {
+                LaunchMouth();
+            }
+            
+        }
     }
     private void LaunchMouth()
     {

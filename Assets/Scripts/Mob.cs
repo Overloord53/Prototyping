@@ -9,8 +9,11 @@ public class Mob : MonoBehaviour
         if (col.gameObject.CompareTag("Zunge"))
         {
             {
+                
                 Destroy(gameObject);
+                ScoreScript.scoreValue += 10;
             }
+            
         }
     }
 }

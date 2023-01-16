@@ -22,7 +22,7 @@ public class MobDamage : MonoBehaviour
         }
         if (col.gameObject.CompareTag("Zunge"))
         {
-            PlayerHealth playerHealth =  col.gameObject.GetComponent<PlayerHealth>();
+            PlayerHealth playerHealth =  col.gameObject.GetComponentInParent<PlayerHealth>();
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
