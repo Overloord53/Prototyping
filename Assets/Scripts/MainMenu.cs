@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("QUTI!");
         Application.Quit();
     }
+
+    public void SelectWorld()
+    {
+        SceneManager.LoadScene("Select");
+    }
 }

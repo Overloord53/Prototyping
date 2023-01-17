@@ -10,6 +10,7 @@ public class Zunge : MonoBehaviour
     public Player player;
     public float speed = 10f;
     public Animator animator;
+    public int damage;
     
     
 
@@ -23,28 +24,32 @@ public class Zunge : MonoBehaviour
     private void Update()
     {
 
+        spacekeyState = Input.GetKey(KeyCode.Space);
+
+        animator.SetBool("Zunge", spacekeyState);
        
+        
+        
 
-
-        if (myRigidbody2D.velocity == Vector2.zero)
-        {
-            spacekeyState = Input.GetKeyDown(KeyCode.Space);
-            if (spacekeyState == true)
-            {
-                LaunchTongue();
-            }
-        }
-        
-        
-        
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Mob"))
+        {
+            Mob mobhealth =  col.gameObject.GetComponent<Mob>();
+            if (mobhealth != null)
+            {
+                mobhealth.TakeDamage(damage);
+            }
+
+        }
+    }
+   
 
     
 
-    private void LaunchTongue()
-    {
-        animator.SetTrigger("Zunge");
-    }
+   
 
     
     

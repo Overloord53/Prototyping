@@ -4,16 +4,34 @@ using UnityEngine;
 
 public class Mob : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D col)
+    public int maxHealth = 2;
+    public float currenthealth { get; private set; }
+   
+    
+    
+    
+    void Start()
     {
-        if (col.gameObject.CompareTag("Zunge"))
+        currenthealth = maxHealth;
+    }
+    
+    public void TakeDamage(int damage)
+    {
+        currenthealth -= damage;
+        if (currenthealth <= 0)
         {
-            {
-                
-                Destroy(gameObject);
-                ScoreScript.scoreValue += 10;
-            }
+            ScoreScript.scoreValue += 10;
+            
+            Destroy(gameObject);
             
         }
+        
     }
+    
+    
+    
+    
+    
+    
 }
+

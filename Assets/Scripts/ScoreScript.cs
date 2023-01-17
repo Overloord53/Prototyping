@@ -17,6 +17,7 @@ public class ScoreScript : MonoBehaviour
 
    private void Update()
    {
+      
       score.text = "Points: " + scoreValue;
    }
 }

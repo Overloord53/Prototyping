@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public int desiredLane = 1;
     public float laneDistance = 10.5f;
     private Vector3 spawnPos;
-
+    
 
 
     private void Awake()
@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
+        spacekeyState = Input.GetKey(KeyCode.Space);
+
+        animator.SetBool("Auf", spacekeyState);
 
         if (Input.GetKeyDown(KeyCode.S))
         {
@@ -63,14 +67,6 @@ public class Player : MonoBehaviour
         
         
         
-        if (myRigidbody2D.velocity == Vector2.zero)
-        {
-            spacekeyState = Input.GetKeyDown(KeyCode.Space);
-            if (spacekeyState == true)
-            {
-                LaunchMouth();
-            } 
-        }
         
         
         
@@ -84,10 +80,13 @@ public class Player : MonoBehaviour
             }
             
         }
+       
     }
     private void LaunchMouth()
     {
-        animator.SetTrigger("Auf");
+        animator.SetTrigger("MundAuf");
     }
    
+    
+    
 }
