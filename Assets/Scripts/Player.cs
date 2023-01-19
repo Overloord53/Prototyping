@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
+    
     public float speed = 10f;
     private Rigidbody2D myRigidbody2D;
     private float _startSpeed ;
@@ -67,13 +69,13 @@ public class Player : MonoBehaviour
         
         
         
-        
+       
         
         
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Mob"))
+        if (col.gameObject.CompareTag("Mob")) 
         {
             {
                 LaunchMouth();

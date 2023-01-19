@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomSpawner : MonoBehaviour
+public class RandomMobSpawner : MonoBehaviour
 {
     public Transform[] spawnpoints;
     public GameObject[] ememyPrefabs;
@@ -11,7 +11,7 @@ public class RandomSpawner : MonoBehaviour
     void Start()
     {
         spawnAllowed = true;
-        InvokeRepeating("SpawnMobs", 5f, 5f );
+        InvokeRepeating("SpawnMobs", 2f, 3f );
     }
 
     void SpawnMobs()
@@ -29,5 +29,5 @@ public class RandomSpawner : MonoBehaviour
         }
     }
     
-    
+  
 }
