@@ -29,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
             ScoreScript.scoreValue = 0;
             Destroy(gameObject);
             SceneManager.LoadScene("LooseScreen");
+            
         }
     }
 }

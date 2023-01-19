@@ -80,12 +80,21 @@ public class Player : MonoBehaviour
             }
             
         }
-       
+
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            animator.SetTrigger("Schaden");
+        }
+      
+        
+        
+
     }
     private void LaunchMouth()
     {
         animator.SetTrigger("MundAuf");
     }
+    
    
     
     
