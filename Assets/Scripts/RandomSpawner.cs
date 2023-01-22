@@ -11,7 +11,7 @@ public class RandomSpawner : MonoBehaviour
     void Start()
     {
         spawnAllowed = true;
-        InvokeRepeating("SpawnMobs", 5f, 5f );
+        InvokeRepeating("SpawnMobs", 8f, 4f );
     }
 
     void SpawnMobs()
