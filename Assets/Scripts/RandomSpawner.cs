@@ -42,6 +42,18 @@ public class RandomSpawner : MonoBehaviour
     {
         if (ScoreScript.scoreValue >= 100)
         {
+            return 3;
+        }
+        
+        
+        if (ScoreScript.scoreValue >= 250)
+        {
+            return 2;
+        }
+       
+        
+        if (ScoreScript.scoreValue >= 500)
+        {
             return 1;
         }
 
