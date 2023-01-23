@@ -157,10 +157,8 @@ MonoBehaviour:
   - {fileID: 221817288}
   - {fileID: 328381597}
   ememyPrefabs:
-  - {fileID: 442172808069458843, guid: 072af47539ae0794db227437b8050991, type: 3}
+  - {fileID: 313069301992212253, guid: ee9eef41b26677e47844c60526ae8f49, type: 3}
   - {fileID: 3515821940961778787, guid: b83b136d526217d48acaca254bc8df48, type: 3}
-  spawnLimit: 1
-  spawned: 0
 --- !u!4 &8879228
 Transform:
   m_ObjectHideFlags: 0
@@ -577,7 +575,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6d34ac4ae561d1546b5e922b490ed694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1027,7 +1025,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6d34ac4ae561d1546b5e922b490ed694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3547,9 +3545,9 @@ MonoBehaviour:
   - {fileID: 1093475955}
   ememyPrefabs:
   - {fileID: 2991215664023974323, guid: 5c7417e155255014b956b88d0802303b, type: 3}
-  - {fileID: 313069301992212253, guid: ee9eef41b26677e47844c60526ae8f49, type: 3}
-  spawnLimit: 1
-  spawned: 0
+  - {fileID: 442172808069458843, guid: 072af47539ae0794db227437b8050991, type: 3}
+  EnemyInterval: 5
+  maxEnemies: 3
 --- !u!4 &1861526838
 Transform:
   m_ObjectHideFlags: 0
@@ -3685,7 +3683,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 606abefcad5af89469e35cb5acc902e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3797,7 +3795,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6d34ac4ae561d1546b5e922b490ed694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
