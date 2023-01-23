@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Wespe_Schatten : MonoBehaviour
 {
-    public Vector2 offset = new Vector2(0,0.87f);
-
+    public Vector2 offset = new Vector2(0,3.07f);
+    
+    
     private SpriteRenderer sprRndCaster;
     private SpriteRenderer sprRndShadow;
 
@@ -31,7 +32,6 @@ public class Wespe_Schatten : MonoBehaviour
 
     private void LateUpdate()
     {
-
         sprRndShadow.sprite = sprRndCaster.sprite;
 
     }
