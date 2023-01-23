@@ -14,7 +14,7 @@ public class RandomMobSpawner : MonoBehaviour
     {
         
         spawnAllowed = true;
-        InvokeRepeating("SpawnMobs", 2f, 3f );
+        InvokeRepeating("SpawnMobs", 2f, 2f );
       
     }
 
