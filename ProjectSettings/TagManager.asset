@@ -7,6 +7,7 @@ TagManager:
   - Mob
   - Zunge
   - Enemy
+  - Powerup
   layers:
   - Default
   - TransparentFX
