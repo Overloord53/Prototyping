@@ -40,6 +40,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
+            animator.SetTrigger("Drop");
             desiredLane++;
             if (desiredLane==3)
             {
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
+            animator.SetTrigger("Sprung");
             desiredLane--;
             if (desiredLane==-1)
             {

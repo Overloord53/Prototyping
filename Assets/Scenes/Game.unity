@@ -3000,6 +3000,7 @@ GameObject:
   - component: {fileID: 1568802969}
   - component: {fileID: 1568802968}
   - component: {fileID: 1568802971}
+  - component: {fileID: 1568802972}
   m_Layer: 0
   m_Name: zunge
   m_TagString: Zunge
@@ -3046,7 +3047,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 032ebf40a9391444a87932578a7eff43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3154,6 +3155,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1568802972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568802965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b76fe7176645e4a8ff76f3160a19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: -0.2}
 --- !u!1 &1615782086
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,6 +3594,7 @@ GameObject:
   - component: {fileID: 1928425420}
   - component: {fileID: 1928425421}
   - component: {fileID: 1928425416}
+  - component: {fileID: 1928425422}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3683,7 +3698,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: 606abefcad5af89469e35cb5acc902e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3739,6 +3754,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.23267171, y: -0.42452464}
   m_Size: {x: 8.634699, y: 7.5881248}
   m_Direction: 1
+--- !u!114 &1928425422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928425414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f003d4cbc821dbf488e30154e03bb990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: -0.2}
 --- !u!1 &2000847253
 GameObject:
   m_ObjectHideFlags: 0
