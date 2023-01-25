@@ -6,15 +6,13 @@ public class Zunge : MonoBehaviour
 {
    
     private Rigidbody2D myRigidbody2D;
-    private bool spacekeyState;
     public Player player;
     public float speed = 10f;
     public Animator animator;
     public int damage;
-    
-    
+    private int currentState;
+    private bool isActive;
 
-    
     private void Awake()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
@@ -23,16 +21,43 @@ public class Zunge : MonoBehaviour
     
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if(!isActive) animator.SetTrigger("ZungeTrigger");
+            isActive = true;
+        }
 
-        spacekeyState = Input.GetKey(KeyCode.Space);
-
-        animator.SetBool("Zunge", spacekeyState);
-       
-        
-        
-
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isActive = false;
+            AnimationHandler();
+        }
     }
 
+    public void ChangeState(int state)
+    {
+        currentState = state;
+    }
+    
+    private void AnimationHandler()
+    {
+        switch (currentState)
+        {
+            case 0:
+                print("Kurz");
+                animator.SetTrigger("ZungeKurz");
+                break;
+            case 1:
+                print("Mittel");
+                animator.SetTrigger("ZungeMittel");
+                break;
+            case 2:
+                print("Lang");
+                animator.SetTrigger("ZungeLang");
+                break;
+        }
+    }
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Mob"))
@@ -42,21 +67,6 @@ public class Zunge : MonoBehaviour
             {
                 mobhealth.TakeDamage(damage);
             }
-            
-
         }
     }
-   
-
-    
-
-   
-
-    
-    
-   
-
-    
-
-    
 }

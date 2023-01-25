@@ -15,12 +15,6 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<ScoreScript>();
     }
 
-    private void Update()
-    {
-        
-    }
-
-
     public void TakeDamage(int damage)
     {
         currenthealth -= damage;
