@@ -68,5 +68,11 @@ public class Zunge : MonoBehaviour
                 mobhealth.TakeDamage(damage);
             }
         }
+       
+        
+        if (col.gameObject.CompareTag("Enemy"))
+        {
+            player.animator.SetTrigger("Schaden");
+        }
     }
 }

@@ -89,6 +89,10 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("Schaden");
         }
+        if (col.gameObject.CompareTag("Enemy2"))
+        {
+            animator.SetTrigger("Schaden");
+        }
       
         
         

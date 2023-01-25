@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5940923586531845767}
   - component: {fileID: 7601174195607088352}
-  - component: {fileID: -8286686189085961203}
   - component: {fileID: -5197766152044305293}
   - component: {fileID: 3097939218748574716}
   - component: {fileID: -6305691560734030655}
   - component: {fileID: 4149297386890704480}
   - component: {fileID: 1153143278341596125}
   - component: {fileID: 1655281815775294388}
+  - component: {fileID: -5789592294040495890}
   m_Layer: 0
   m_Name: Mob2
   m_TagString: Mob
@@ -89,19 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8286686189085961203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3515821940961778787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 379069501d54c6a4098bac1e0ab3c192, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
 --- !u!114 &-5197766152044305293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +194,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: -0.25}
+--- !u!114 &-5789592294040495890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3515821940961778787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379069501d54c6a4098bac1e0ab3c192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  anim: {fileID: 1153143278341596125}

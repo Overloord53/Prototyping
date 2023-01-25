@@ -7,7 +7,7 @@ using UnityEngine;
 public class Mob : MonoBehaviour
 {
     public int maxHealth = 2;
-    private Animator anim;
+    public Animator anim;
     public float currenthealth { get; private set; }
 
 
@@ -20,16 +20,8 @@ public class Mob : MonoBehaviour
     {
         currenthealth = maxHealth;
     }
-    public void Death()
-    {
-        anim.SetTrigger("Die");
-        Invoke(nameof(DestroySelf),1f);
-    }
-
-    void DestroySelf()
-    {
-        Destroy(gameObject);
-    }
+    
+    
     
     public void TakeDamage(int damage)
     {
@@ -37,8 +29,8 @@ public class Mob : MonoBehaviour
         if (currenthealth <= 0)
         {
             ScoreScript.scoreValue += 10;
-            
-            Destroy(gameObject);
+            anim.SetTrigger("Die");
+            Destroy(gameObject, 0.1f);
             
         }
         

@@ -13,6 +13,14 @@ public class Plus_Health_PowerUp : MonoBehaviour
         if (col.gameObject.CompareTag("Powerup"))
         {
             PlayerHealth.currenthealth = zb;
+           
+        }
+        
+        if (col.gameObject.CompareTag("Zunge"))
+        {
+
+            Destroy(gameObject);
+
         }
     }
 }

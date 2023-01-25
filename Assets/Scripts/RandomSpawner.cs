@@ -43,7 +43,7 @@ public class RandomSpawner : MonoBehaviour
         
         if (ScoreScript.scoreValue >= 100)
         {
-            return 2;
+            return 4;
         }
 
         return EnemyInterval;
