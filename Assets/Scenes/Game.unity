@@ -3168,7 +3168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHealth: {fileID: 1928425420}
-  zb: 3
+  zb: 1
 --- !u!1 &1615782086
 GameObject:
   m_ObjectHideFlags: 0

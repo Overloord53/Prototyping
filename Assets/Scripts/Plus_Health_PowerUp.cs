@@ -12,7 +12,7 @@ public class Plus_Health_PowerUp : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Powerup"))
         {
-            PlayerHealth.currenthealth = zb;
+            PlayerHealth.currenthealth++;
            
         }
         
