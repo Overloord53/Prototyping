@@ -68,6 +68,15 @@ public class Zunge : MonoBehaviour
                 mobhealth.TakeDamage(damage);
             }
         }
+        if (col.gameObject.CompareTag("Mob"))
+        {
+            Mob2 mobhealth =  col.gameObject.GetComponent<Mob2>();
+            if (mobhealth != null)
+            {
+                mobhealth.TakeDamage(damage);
+            }
+        }
+       
        
         
         if (col.gameObject.CompareTag("Enemy"))

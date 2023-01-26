@@ -41,9 +41,9 @@ public class RandomSpawner : MonoBehaviour
     public float GetInterval()
     {
         
-        if (ScoreScript.scoreValue >= 100)
+        if (ScoreScript.scoreValue >= 150)
         {
-            return 4;
+            return 3;
         }
 
         return EnemyInterval;

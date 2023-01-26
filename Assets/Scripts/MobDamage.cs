@@ -6,7 +6,7 @@ using UnityEngine;
 public class MobDamage : MonoBehaviour
 {
     public int damage;
-    public Animator animator;
+    
     
 
     private void OnTriggerEnter2D(Collider2D col)

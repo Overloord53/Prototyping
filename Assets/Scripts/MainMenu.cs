@@ -19,4 +19,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Select");
     }
+    public void PlayGame2()
+    {
+        SceneManager.LoadScene("Game2");
+    }
 }
