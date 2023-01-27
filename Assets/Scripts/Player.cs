@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public float laneDistance = 10.5f;
     private Vector3 spawnPos;
     public AudioSource audioPlayer;
+    public AudioSource audioPlayer2;
     
 
 
@@ -94,6 +95,10 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("Schaden");
             audioPlayer.Play();
+        }
+        if (col.gameObject.CompareTag("Powerup"))
+        {
+            audioPlayer2.Play();
         }
         
       

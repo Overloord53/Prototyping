@@ -13,6 +13,8 @@ public class Zunge : MonoBehaviour
     private int currentState;
     private bool isActive;
     public AudioSource audioPlayer;
+    public AudioSource audioPlayer2;
+    public AudioSource audioPlayer3;
 
     private void Awake()
     {
@@ -79,12 +81,22 @@ public class Zunge : MonoBehaviour
                 audioPlayer.Play();
             }
         }
+        if (col.gameObject.CompareTag("Powerup"))
+        {
+            audioPlayer2.Play();
+        }
        
        
         
         if (col.gameObject.CompareTag("Enemy"))
         {
             player.animator.SetTrigger("Schaden");
+            audioPlayer3.Play();
+        }
+        if (col.gameObject.CompareTag("Enemy2"))
+        {
+            player.animator.SetTrigger("Schaden");
+            audioPlayer3.Play();
         }
     }
 }
