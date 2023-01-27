@@ -17,6 +17,7 @@ public class MobDamage : MonoBehaviour
             PlayerHealth playerHealth =  col.gameObject.GetComponent<PlayerHealth>();
             if (playerHealth != null)
             {
+                
                 playerHealth.TakeDamage(damage);
                 Destroy(gameObject);
             }
@@ -26,7 +27,9 @@ public class MobDamage : MonoBehaviour
         {
             PlayerHealth playerHealth =  col.gameObject.GetComponentInParent<PlayerHealth>();
             if (playerHealth != null)
+                
             {
+                
                 playerHealth.TakeDamage(damage);
             }
 

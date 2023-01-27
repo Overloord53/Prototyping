@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
     private Rigidbody2D myRigidbody2D;
     private float _startSpeed ;
     private Vector2 _moveInput;
-    public string Axis;
     public Animator animator;
     private bool spacekeyState;
     public int desiredLane = 1;
     public float laneDistance = 10.5f;
     private Vector3 spawnPos;
+    public AudioSource audioPlayer;
     
 
 
@@ -88,11 +88,14 @@ public class Player : MonoBehaviour
         if (col.gameObject.CompareTag("Enemy"))
         {
             animator.SetTrigger("Schaden");
+            audioPlayer.Play();
         }
         if (col.gameObject.CompareTag("Enemy2"))
         {
             animator.SetTrigger("Schaden");
+            audioPlayer.Play();
         }
+        
       
         
         
@@ -102,6 +105,7 @@ public class Player : MonoBehaviour
     {
         animator.SetTrigger("MundAuf");
     }
+    
     
    
     

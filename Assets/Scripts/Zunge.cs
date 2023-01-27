@@ -12,6 +12,7 @@ public class Zunge : MonoBehaviour
     public int damage;
     private int currentState;
     private bool isActive;
+    public AudioSource audioPlayer;
 
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class Zunge : MonoBehaviour
             if (mobhealth != null)
             {
                 mobhealth.TakeDamage(damage);
+                audioPlayer.Play();
             }
         }
         if (col.gameObject.CompareTag("Mob"))
@@ -74,6 +76,7 @@ public class Zunge : MonoBehaviour
             if (mobhealth != null)
             {
                 mobhealth.TakeDamage(damage);
+                audioPlayer.Play();
             }
         }
        
