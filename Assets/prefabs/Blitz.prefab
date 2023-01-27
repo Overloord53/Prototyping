@@ -172,8 +172,8 @@ GameObject:
   - component: {fileID: 3854075616188585243}
   - component: {fileID: 4469560054793083061}
   - component: {fileID: 1405740958020379427}
-  - component: {fileID: 1892396671181195455}
   - component: {fileID: 2158057210309964615}
+  - component: {fileID: 2911922063082075789}
   m_Layer: 0
   m_Name: Blitz
   m_TagString: Enemy
@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 7178022610548349630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.7, y: 2.2, z: 0}
-  m_LocalScale: {x: -0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: -0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1645881761969795418}
   - {fileID: 1538700828009553280}
@@ -237,7 +237,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: af7d1e56585fa834eafc46b7aff89157, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80e716cf006bac341baa1442c2e40772, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4d4642f35491a4d969bb1484fdf5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spiderwebPrefab: {fileID: 1427103398568198849, guid: d0e655623f35c5942a94347c9e7b38e5, type: 3}
-  _animator: {fileID: 1892396671181195455}
+  spiderwebPrefab: {fileID: 2450866717022818860, guid: 84f3a5541814ef4429fee28f76d764ba, type: 3}
+  _animator: {fileID: 2911922063082075789}
   mouth: {fileID: 1645881761969795418}
 --- !u!114 &3067814339384488256
 MonoBehaviour:
@@ -314,7 +314,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
+    oldSize: {x: 29.799997, y: 26.962593}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -336,26 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  audioPlayer: {fileID: 8316961351853439891}
---- !u!95 &1892396671181195455
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7178022610548349630}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c704a78e9cfb934f820787adcb6bfa2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2158057210309964615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,3 +349,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: -0.85}
+--- !u!95 &2911922063082075789
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178022610548349630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 479b3c1c6021143468c9ead6d8150cfe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

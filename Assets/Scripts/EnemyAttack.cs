@@ -22,8 +22,8 @@ public class EnemyAttack : MonoBehaviour
      
     public void Shoot()
     {
-        GameObject go = Instantiate(spiderwebPrefab, mouth.position, quaternion.identity);
-        Vector3 direcion = new Vector3(transform.localScale.x, 0);
+        GameObject go = Instantiate(spiderwebPrefab, mouth.position, Quaternion.identity);
+        Vector3 direcion = new Vector3(transform.localScale.x, 0).normalized;
         go.GetComponent<Projectile>().Setup(direcion);
     }
 

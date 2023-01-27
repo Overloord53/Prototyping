@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 3824944554450450462}
   - component: {fileID: 7059568078400522896}
   - component: {fileID: 1563568711174655687}
+  - component: {fileID: 7375231647270631600}
   m_Layer: 0
   m_Name: Ratte
   m_TagString: Enemy
@@ -204,7 +205,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 92f9c5e32de95474c931457a7edd4ac0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cba6d674c7f80e1498ae954ef7d47fd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -253,7 +254,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 35.079998, y: 24.802656}
+    oldSize: {x: 23.72, y: 7.285097}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -275,7 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  audioPlayer: {fileID: 1819690889336300840}
 --- !u!114 &7059568078400522896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,3 +302,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: -1}
+--- !u!95 &7375231647270631600
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2470169947078042152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35d5070c4aa18644b8087b9b01e42eb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

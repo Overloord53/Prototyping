@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3970196939418542523}
   - component: {fileID: 692967140949792462}
   - component: {fileID: 6882113089629881914}
+  - component: {fileID: 2659870198818657383}
+  - component: {fileID: 3925532451293263504}
   m_Layer: 0
   m_Name: "Gl\xFChw\xFCrmchen"
   m_TagString: Mob
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f180134e06d1e9e4b9ee715ef6284216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3f8325b44d75bf438b6a194505c1eb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -138,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 35.079998, y: 24.802656}
+    oldSize: {x: 13.81, y: 11.06}
     newSize: {x: 19.2, y: 10.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -172,4 +174,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 427f928874ea7c643a728f9fd542c445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
+--- !u!95 &2659870198818657383
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436214177023834393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63437f272f9169848972cf7acd8c6ad9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3925532451293263504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436214177023834393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca9f3759f8b4df498c299c070d1af34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2659870198818657383}

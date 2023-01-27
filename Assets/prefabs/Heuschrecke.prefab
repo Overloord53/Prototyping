@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 484753213364354670}
   - component: {fileID: 2576773829158801587}
   - component: {fileID: 939600592735494627}
+  - component: {fileID: 4297985642295317675}
   m_Layer: 0
   m_Name: Heuschrecke
   m_TagString: Mob
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 07df9be07a2ed3a49a3c0d018f48e0bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: efaeed0c646595d4593fca496c1b8bcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 35.079998, y: 24.802656}
+    oldSize: {x: 16.79, y: 8.6}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -173,3 +174,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+--- !u!95 &4297985642295317675
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8578850677844974589}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9edd5206eae7ea439d47502a8ab305c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
