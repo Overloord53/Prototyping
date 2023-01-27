@@ -93,10 +93,6 @@ public class Zunge : MonoBehaviour
             player.animator.SetTrigger("Schaden");
             audioPlayer3.Play();
         }
-        if (col.gameObject.CompareTag("Enemy2"))
-        {
-            player.animator.SetTrigger("Schaden");
-            audioPlayer3.Play();
-        }
+      
     }
 }

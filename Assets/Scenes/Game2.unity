@@ -1732,8 +1732,8 @@ MonoBehaviour:
   animator: {fileID: 750715540}
   damage: 1
   audioPlayer: {fileID: 1750292625}
-  audioPlayer2: {fileID: 1317807827}
-  audioPlayer3: {fileID: 1578371924}
+  audioPlayer2: {fileID: 1578371924}
+  audioPlayer3: {fileID: 1317807827}
 --- !u!212 &750715544
 SpriteRenderer:
   m_ObjectHideFlags: 0
