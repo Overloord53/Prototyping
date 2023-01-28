@@ -13,8 +13,16 @@ public class Plus_Health_PowerUp : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Powerup"))
         {
-            PlayerHealth.currenthealth++;
-           
+            if (PlayerHealth.currenthealth <= PlayerHealth.maxHealth)
+            {
+                PlayerHealth.currenthealth++;
+            }
+            if (PlayerHealth.currenthealth >= 4)
+            {
+                PlayerHealth.currenthealth = PlayerHealth.maxHealth;
+            }
+            
+            
            
         }
         

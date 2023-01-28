@@ -10,18 +10,27 @@ public class Enemys : MonoBehaviour
     
     void Start()
     {
-        
+        OnWave();
     }
     
     void Update()
     {
         transform.position += Vector3.left * Time.deltaTime * speed;
         
+        
     }
     
     public void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    public void OnWave()
+    {
+        if (ScoreScript.scoreValue >= 100)
+        {
+            speed++;
+        }
     }
     
   

@@ -16,6 +16,8 @@ public class RandomSpawner : MonoBehaviour
     private int currentEnemies = 0;
     
     
+    
+    
     void Start()
     {
         StartCoroutine(SpawnEnemys());
@@ -41,9 +43,17 @@ public class RandomSpawner : MonoBehaviour
     public float GetInterval()
     {
         
-        if (ScoreScript.scoreValue >= 150)
+        if (ScoreScript.scoreValue >= 100)
         {
-            return 3;
+            EnemyInterval = 3; 
+        }
+        if (ScoreScript.scoreValue >= 300)
+        {
+            EnemyInterval = 2; 
+        }
+        if (ScoreScript.scoreValue >= 500)
+        {
+            EnemyInterval = 1.5f; 
         }
 
         return EnemyInterval;
