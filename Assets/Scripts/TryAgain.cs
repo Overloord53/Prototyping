@@ -9,7 +9,7 @@ public class TryAgain : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("Select");
+        SceneManager.LoadScene("Game");
     }
 
     public void LoadMenu()
