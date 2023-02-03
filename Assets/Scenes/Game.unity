@@ -4338,8 +4338,8 @@ MonoBehaviour:
   animator: {fileID: 1928425416}
   desiredLane: 1
   laneDistance: 10.5
-  audioPlayer: {fileID: 1080994463}
-  audioPlayer2: {fileID: 29904020}
+  audioPlayer: {fileID: 0}
+  audioPlayer2: {fileID: 0}
 --- !u!95 &1928425416
 Animator:
   serializedVersion: 3
